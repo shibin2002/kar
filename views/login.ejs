@@ -1,0 +1,109 @@
+<main
+  style="
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 400px;
+    margin: 60px auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    background-color: #ffffff;
+  "
+>
+  <h2
+    style="
+      color: #2c3e50;
+      text-align: center;
+      margin-bottom: 30px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    "
+  >
+    Admin Login
+  </h2>
+
+  <% if (error) { %>
+  <p
+    style="
+      color: #721c24;
+      background-color: #f8d7da;
+      border: 1px solid #f5c6cb;
+      padding: 10px;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      text-align: center;
+      font-size: 14px;
+    "
+  >
+    <%= error %>
+  </p>
+  <% } %>
+
+  <form
+    action="/login"
+    method="POST"
+    style="display: flex; flex-direction: column; gap: 20px"
+  >
+    <div style="display: flex; flex-direction: column; gap: 5px">
+      <label
+        for="username"
+        style="color: #34495e; font-size: 14px; font-weight: 500"
+        >Username</label
+      >
+      <input
+        id="username"
+        type="text"
+        name="username"
+        placeholder="Enter your username"
+        required
+        style="
+          width: 100%;
+          padding: 12px;
+          border: 1px solid #dcdde1;
+          border-radius: 5px;
+          font-size: 16px;
+          transition: border-color 0.3s ease-in-out;
+        "
+      />
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 5px">
+      <label
+        for="password"
+        style="color: #34495e; font-size: 14px; font-weight: 500"
+        >Password</label
+      >
+      <input
+        id="password"
+        type="password"
+        name="password"
+        placeholder="Enter your password"
+        required
+        style="
+          width: 100%;
+          padding: 12px;
+          border: 1px solid #dcdde1;
+          border-radius: 5px;
+          font-size: 16px;
+          transition: border-color 0.3s ease-in-out;
+        "
+      />
+    </div>
+
+    <button
+      type="submit"
+      style="
+        padding: 12px;
+        background-color: #007bff;
+        color: #ffffff;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+      "
+    >
+      Login
+    </button>
+  </form>
+</main>

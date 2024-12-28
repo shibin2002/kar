@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .container {
+        text-align: center;
+        background: rgba(255, 255, 255, 0.9);
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      }
+
+      h1 {
+        font-size: 24px;
+        color: #2c3e50;
+        margin-bottom: 20px;
+      }
+
+      .button {
+        display: inline-block;
+        padding: 15px 30px;
+        margin: 10px;
+        font-size: 16px;
+        font-weight: bold;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+      }
+
+      .button.projects {
+        background-color: #3498db;
+      }
+
+      .button.projects:hover {
+        background-color: #2980b9;
+      }
+
+      .button.gallery {
+        background-color: #2ecc71;
+      }
+
+      .button.gallery:hover {
+        background-color: #27ae60;
+      }
+
+      .logout-button {
+        margin-top: 20px;
+        background-color: #e74c3c;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 14px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .logout-button:hover {
+        background-color: #c0392b;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Welcome to the Admin Dashboard</h1>
+      <a href="/admin/projects" class="button projects">Manage Projects</a>
+      <a href="/admin/gallery" class="button gallery">Manage Gallery</a>
+      <form action="/logout" method="POST" style="margin-top: 20px">
+        <button type="submit" class="logout-button">Logout</button>
+      </form>
+    </div>
+  </body>
+</html>
