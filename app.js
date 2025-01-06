@@ -4,7 +4,7 @@ const methodOverride = require("method-override");
 const session = require("express-session");
 const multer = require("multer");
 const path = require("path");
-const db = require('./mysql');
+// const db = require('./mysql');
 
 
 const app = express();
